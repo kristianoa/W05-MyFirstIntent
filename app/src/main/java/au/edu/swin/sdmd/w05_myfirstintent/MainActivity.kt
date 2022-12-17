@@ -1,9 +1,9 @@
 package au.edu.swin.sdmd.w05_myfirstintent
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
-import android.content.Intent
 /**
  * Your task: create an intent that opens the DetailActivity when the image in MainActivity
  * is clicked.
@@ -21,13 +21,8 @@ class MainActivity : AppCompatActivity() {
 
         val image = findViewById<ImageView>(R.id.mainImage)
         image.setOnClickListener {
-            try {
-                val intent = Intent(this, DetailActivity::class.java)
-                startActivity(intent)
-            }
-            catch(e: java.lang.Exception) {
-                e.printStackTrace()
-            }
+            val intent = Intent(this, DetailActivity::class.java)
+            startActivity(intent)
         }
     }
 }
